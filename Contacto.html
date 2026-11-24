@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Liga MX</title>
+    <link rel="stylesheet" href="css/contacto.css">
+</head>
+<body>
+
+    <div class="browser-frame">
+        <!-- Encabezado / Navegación -->
+        <header class="site-header">
+            <div class="logo-container">
+                <span class="logo-icon">⚽</span>
+                <h1 class="site-title">Liga MX</h1>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="Ventana_de_sesion.html" class="active">iniciar sesion</a></li>
+                    <li><a href="index.html" class="active">inicio</a></li>
+                    <li><a href="liga-mx/liga-mx/index2.html">Posiciones</a></li>
+                    <li><a href="libertadores.html">Libertadores</a></li>
+                    <li><a href="ejercicios/quinela.html">Quinela</a></li>
+                    
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Contenido Principal -->
+        <main class="site-main">
+            <!-- Sección Formulario de Contacto -->
+            <section class="content-section">
+                <h2>Ponte en contacto con nosotros</h2>
+                <p>¿Tienes alguna duda sobre la quiniela, comentarios de la Liga MX o sugerencias para la plataforma? Escríbenos y te responderemos lo antes posible.</p>
+
+                <form class="contact-form" action="#" method="POST">
+                    <div class="form-group">
+                        <label for="nombre">Nombre Completo</label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre y apellido" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Correo Electrónico</label>
+                        <input type="email" id="email" name="email" placeholder="ejemplo@correo.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="asunto">Asunto</label>
+                        <select id="asunto" name="asunto" required>
+                            <option value="" disabled selected>Selecciona una opción</option>
+                            <option value="quiniela">Dudas sobre la Quiniela</option>
+                            <option value="soporte">Soporte técnico</option>
+                            <option value="sugerencia">Sugerencias o comentarios</option>
+                            <option value="otro">Otro asunto</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="mensaje">Mensaje</label>
+                        <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribe tu mensaje aquí..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-primary">Enviar Mensaje</button>
+                </form>
+            </section>
+
+            <!-- Barra Lateral con información directa -->
+            <aside class="sidebar">
+                <h3>Información Directa</h3>
+                
+                <div class="info-card">
+                    <span class="card-icon">📍</span>
+                    <div>
+                        <h4>Ubicación</h4>
+                        <p>Ciudad de México, México</p>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <span class="card-icon">✉️</span>
+                    <div>
+                        <h4>Correo Directo</h4>
+                        <p>contacto@ligamx.com</p>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <span class="card-icon">⏰</span>
+                    <div>
+                        <h4>Atención</h4>
+                        <p>Lunes a Viernes<br>9:00 AM - 6:00 PM</p>
+                    </div>
+                </div>
+
+                <div class="info-box">
+                    <span class="globe-icon">⚽🏆</span>
+                    <p>Suma tu grano de arena para la mejora constante de nuestros simuladores y quinielas.</p>
+                </div>
+            </aside>
+        </main>
+
+        <!-- Pie de página -->
+        <footer class="site-footer">
+            <p>&copy; 2026 Liga BBVA. Todos los derechos reservados.</p>
+        </footer>
+    </div>
+
+</body>
+</html>

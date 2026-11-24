@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudamericana - Liga MX</title>
+    <link rel="stylesheet" href="css/estiloslibertadores.css">
+</head>
+<body>
+    <header class="header-torneos">
+        <div class="logo-container">
+           <img src="img/ligamx.png" alt="Logo Liga MX" class="logo-img">
+            <h1 class="site-title">LIGA MX</h1>
+        </div>
+        <div class="header-links">
+            <a href="index.html" class="btn-regresar">❮ REGRESAR</a>
+        </div>
+    </header>
+
+    <nav class="sub-nav">
+        <ul>
+            <li><a href="libertadores.html" class="nav-link">Libertadores</a></li>
+            <li><a href="sudamericana.html" class="nav-link active">Sudamericana</a></li>
+            <li><a href="concachampions.html" class="nav-link">Concachampions</a></li>
+        </ul>
+    </nav>
+
+    <main class="main-content">
+        <section class="seccion-titulo">
+            <h2>Participantes de la Copa Sudamericana</h2>
+        </section>
+        <section class="grid-participantes">
+            <div class="equipo-card" onclick="abrirModalEquipo('america_sud')">
+                <img src="img/america.jpg" alt="América" class="logo-equipo">
+                <p>América</p>
+            </div>
+            <div class="equipo-card" onclick="abrirModalEquipo('pachuca_sud')">
+                <img src="img/pachuca.jpg" alt="Pachuca" class="logo-equipo">
+                <p>Pachuca</p>
+            </div>
+            <div class="equipo-card" onclick="abrirModalEquipo('pumas_sud')">
+                <img src="img/pumas.jpg" alt="Pumas" class="logo-equipo">
+                <p>Pumas</p>
+            </div>
+            <div class="equipo-card" onclick="abrirModalEquipo('chivas_sud')">
+                <img src="img/chivas.jpg" alt="Chivas" class="logo-equipo">
+                <p>Chivas</p>
+            </div>
+            <div class="equipo-card" onclick="abrirModalEquipo('toluca_sud')">
+                <img src="img/toluca.jpg" alt="Toluca" class="logo-equipo">
+                <p>Toluca</p>
+            </div>
+            <div class="equipo-card" onclick="abrirModalEquipo('sanluis_sud')">
+                <img src="img/sanluis.jpg" alt="San Luis" class="logo-equipo">
+                <p>San Luis</p>
+            </div>
+        </section>
+
+        <section class="seccion-titulo">
+            <h2>Partidos Históricos</h2>
+        </section>
+        <section class="grid-historicos">
+            <div class="partido-card" onclick="abrirModalPartido('pachuca_colo')">
+                <div class="logos-enfrentamiento">
+                    <img src="img/pachuca.jpg" alt="Pachuca" class="logo-equipo-peq">
+                    <span>vs</span>
+                    <img src="img/colocolo.jpg" alt="Colo Colo" class="logo-equipo-peq">
+                </div>
+                <img src="img/pachucavscolo.jpg" alt="Pachuca Campeón" class="img-partido-historico">
+                <h3 class="titulo-partido">Pachuca Campeón 2006</h3>
+            </div>
+            <div class="partido-card" onclick="abrirModalPartido('america_arsenal')">
+                <div class="logos-enfrentamiento">
+                    <img src="img/america.jpg" alt="América" class="logo-equipo-peq">
+                    <span>vs</span>
+                    <img src="img/arsenal.jpg" alt="Arsenal" class="logo-equipo-peq">
+                </div>
+                <img src="img/ladron2.jpg" alt="América vs Arsenal de Sarandí" class="img-partido-historico">
+                <h3 class="titulo-partido">El Robo de Sarandí</h3>
+            </div>
+        </section>
+    </main>
+
+    <div id="ventana-modal" class="modal">
+        <div class="modal-contenido">
+            <span class="cerrar-modal" onclick="cerrarModal()">&times;</span>
+            <img id="modal-imagen" src="" alt="Imagen">
+            <h2 id="modal-titulo"></h2>
+            <div id="modal-info" class="modal-texto"></div>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 Liga BBVA. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="js/internacional.js"></script>
+</body>
+</html>

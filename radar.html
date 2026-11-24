@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radar de Jugadores Históricos - Liga MX</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/radar.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="logo-container">
+            <img src="img/ligamx.png" alt="Logo Liga MX" class="logo-img">
+            <h1 class="site-title">LIGA MX</h1>
+        </div>
+        <div class="header-links">
+            <a href="index.html" class="btn-regresar">❮ REGRESAR</a>
+        </div>
+    </header>
+
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="index.html">Inicio</a></li>
+            <li class="dropdown">
+                <a href="#">Simulador ▾</a>
+                <ul class="dropdown-content">
+                    <li><a href="simulador_libre.html">Simulador libre</a></li>
+                    <li><a href="simulador_oficial.html">Quiniela fase final</a></li>
+                </ul>
+            </li>
+            <li><a href="ejercicios/quinela.html">Quiniela</a></li>
+            <li class="dropdown">
+                <a href="#">Internacional ▾</a>
+                <ul class="dropdown-content">
+                    <li><a href="sudamericana.html">Sudamericana</a></li>
+                    <li><a href="libertadores.html">Libertadores</a></li>
+                    <li><a href="concachampions.html">Concachampions</a></li>
+                </ul>
+            </li>
+           <li><a href="liga-mx/liga-mx/index2.html">Posiciones</a></li>
+        </ul>
+    </nav>
+
+    <main class="radar-container">
+        <section class="radar-hero">
+            <h2>Radar de Leyendas por Club</h2>
+            <p>Selecciona el escudo de cualquier club de la Liga MX para explorar su Top 5 histórico en goles, partidos disputados, asistencias y porterías imbatidas.</p>
+            <div class="buscador-wrapper">
+                <input type="text" id="buscador-club" placeholder="Buscar club (ej. Toluca, Tigres, América, Cruz Azul)..." onkeyup="filtrarClubes()">
+            </div>
+        </section>
+
+        <section class="grid-clubes" id="grid-clubes"></section>
+    </main>
+
+    <div id="modal-radar" class="modal-radar">
+        <div class="modal-radar-contenido">
+            <button class="cerrar-modal-radar" onclick="cerrarModalRadar()">&times;</button>
+            
+            <div class="modal-radar-header" id="modal-header-banner">
+                <img id="radar-escudo" src="" alt="Escudo del club" class="radar-escudo-modal">
+                <div class="modal-titulo-grupo">
+                    <span id="radar-apodo" class="badge-apodo"></span>
+                    <h2 id="radar-nombre-club"></h2>
+                    <p id="radar-fundacion" class="texto-fundacion"></p>
+                </div>
+            </div>
+
+            <div class="radar-tabs">
+                <button class="tab-btn active" data-tab="goleadores" onclick="cambiarTabRadar('goleadores')">⚽ Goleadores</button>
+                <button class="tab-btn" data-tab="partidos" onclick="cambiarTabRadar('partidos')">👕 Más Partidos</button>
+                <button class="tab-btn" data-tab="asistencias" onclick="cambiarTabRadar('asistencias')">🎯 Asistencias</button>
+                <button class="tab-btn" data-tab="porterias" onclick="cambiarTabRadar('porterias')">🧤 Porterías en 0</button>
+            </div>
+
+            <div class="radar-body">
+                <div id="radar-tabla-contenedor"></div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 Liga BBVA. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="js/radar.js"></script>
+</body>
+</html>

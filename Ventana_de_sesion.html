@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acceso - Liga MX</title>
+    <link rel="stylesheet" href="css/sesion.css">
+</head>
+<body>
+    <div class="browser-frame">
+        <header class="site-header">
+            <div class="logo-container">
+                <span class="logo-icon">🇲🇽⚽🏆</span>
+                <h1 class="site-title">LIGA MX</h1>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="ejercicios/quinela.html">Quiniela</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="sesion-container">
+            <div class="sesion-box">
+                <h2 id="titulo-form">Iniciar Sesión</h2>
+                
+                <form id="form-sesion">
+                    <div class="input-group">
+                        <label for="nombre_usuario">Nombre de Usuario</label>
+                        <input type="text" id="nombre_usuario" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="contrasena">Contraseña</label>
+                        <input type="password" id="contrasena" required>
+                    </div>
+                    
+                    <p id="msg-error" class="mensaje-error"></p>
+                    
+                    <button type="submit" id="btn-submit" class="btn-primario" data-accion="login">Entrar a mi cuenta</button>
+                </form>
+                
+                <div class="toggle-accion">
+                    <p id="texto-toggle">¿No tienes cuenta? <span id="link-toggle">Regístrate aquí</span></p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/sesion.js"></script>
+</body>
+</html>

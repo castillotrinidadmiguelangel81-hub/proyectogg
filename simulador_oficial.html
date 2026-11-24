@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liguilla Oficial - Liga MX</title>
+    <link rel="stylesheet" href="css/bracket.css">
+</head>
+<body>
+    <header class="header-oficial">
+        <div class="logo-container">
+           <img src="img/ligamx.png" alt="Logo Liga MX" class="logo-img">
+            <h1 class="site-title">LIGA MX</h1>
+        </div>
+        <div class="header-links">
+            <a href="index.html" class="btn-regresar">❮ INICIO</a>
+             <a href="ejercicios/quinela.html" class="btn-regresar">❮ Quiniela</a>
+            <a href="Ventana_de_sesion.html" class="btn-regresar">❮ inicio de sesion</a>
+        </div>
+    </header>
+
+    <main class="bracket-container">
+        <div class="instrucciones">
+            <h2>Fase Final: Liguilla</h2>
+            <p>Los 8 mejores de tu quiniela se enfrentan. Haz clic en el equipo que deseas que avance a la siguiente ronda.</p>
+        </div>
+        
+        <div class="bracket">
+            <div class="fase cuartos">
+                <h3>Cuartos de Final</h3>
+                <div class="llave" id="llave-cf1">
+                    <button class="slot-equipo" id="cf1-L" data-target="sf1-L"></button>
+                    <button class="slot-equipo" id="cf1-V" data-target="sf1-L"></button>
+                </div>
+                <div class="llave" id="llave-cf2">
+                    <button class="slot-equipo" id="cf2-L" data-target="sf1-V"></button>
+                    <button class="slot-equipo" id="cf2-V" data-target="sf1-V"></button>
+                </div>
+                <div class="llave" id="llave-cf3">
+                    <button class="slot-equipo" id="cf3-L" data-target="sf2-L"></button>
+                    <button class="slot-equipo" id="cf3-V" data-target="sf2-L"></button>
+                </div>
+                <div class="llave" id="llave-cf4">
+                    <button class="slot-equipo" id="cf4-L" data-target="sf2-V"></button>
+                    <button class="slot-equipo" id="cf4-V" data-target="sf2-V"></button>
+                </div>
+            </div>
+
+            <div class="fase semis">
+                <h3>Semifinales</h3>
+                <div class="llave" id="llave-sf1">
+                    <button class="slot-equipo vacio" id="sf1-L" data-target="final-L"></button>
+                    <button class="slot-equipo vacio" id="sf1-V" data-target="final-L"></button>
+                </div>
+                <div class="llave" id="llave-sf2">
+                    <button class="slot-equipo vacio" id="sf2-L" data-target="final-V"></button>
+                    <button class="slot-equipo vacio" id="sf2-V" data-target="final-V"></button>
+                </div>
+            </div>
+
+            <div class="fase final">
+                <h3>Gran Final</h3>
+                <div class="llave" id="llave-final">
+                    <button class="slot-equipo vacio" id="final-L" data-target="campeon"></button>
+                    <button class="slot-equipo vacio" id="final-V" data-target="campeon"></button>
+                </div>
+            </div>
+            
+            <div class="fase campeon-fase">
+                <h3>Campeón</h3>
+                <div class="slot-equipo vacio campeon-slot" id="campeon"></div>
+            </div>
+        </div>
+
+        <div class="acciones">
+            <button id="btn-guardar-bd" class="btn-guardar" disabled>Guardar en Base de Datos</button>
+        <button id="btn-borrar-simuladores" class="btn-borrar">Borrar mis simuladores guardados</button>
+        </div>
+    </main>
+
+    <script src="js/simulador_oficial.js"></script>
+</body>
+</html>

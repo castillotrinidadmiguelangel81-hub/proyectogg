@@ -1,0 +1,62 @@
+:root {
+    --verde: #006847;
+    --verde-oscuro: #00543a;
+    --fondo: #f4f6f3;
+    --borde: #d9dfdb;
+    --texto: #1d2b24;
+    --suave: #8a9690;
+  }
+  * { box-sizing:border-box; }
+  body { 
+    margin:0; font-family:"Segoe UI",system-ui,-apple-system,Roboto,Arial,sans-serif; background:var(--fondo); color:var(--texto); min-height:100vh; }
+    .encabezado {
+  height:6px; background:linear-gradient(90deg, #006847 0 33.33%, #ffffff 33.33% 66.66%, #ce1126 66.66% 100%); } 
+  header { 
+    text-align:center; padding:28px 16px 8px;
+  .encabezado {
+  height:6px; background:linear-gradient(90deg, #006847 0 33.33%, #ffffff 33.33% 66.66%, #ce1126 66.66% 100%); } 
+}
+  h1 { 
+    margin:0; font-size:1.7rem; font-weight:900; text-transform:uppercase; letter-spacing:.02em; color:var(--verde); }
+  h1 span {
+     color:var(--texto); }
+  header p { 
+    color:var(--suave); margin:6px 0 0; }
+  .filtros { 
+    display:flex; flex-wrap:wrap; gap:12px; max-width:900px; margin:20px auto; padding:0 16px; }
+  .campo {
+     flex:1 1 220px; display:flex; flex-direction:column; gap:6px; }
+  label {
+     font-size:.85rem; color:var(--texto); }
+  select, input {
+     padding:10px 12px; border-radius:8px; border:1px solid var(--borde); background:#fff; color:var(--texto); font-size:.95rem; font-family:inherit; }
+  select::placeholder, input::placeholder {
+     color:var(--suave); }
+  select:disabled, input:disabled { 
+    background:#eef1ef; color:var(--suave); }
+  select:focus, input:focus {
+     outline:none; border-color:var(--verde); box-shadow:0 0 0 3px rgba(0,104,71,.15); }
+  .tabla-wrap {
+     max-width:900px; margin:0 auto 40px; padding:0 16px; overflow-x:auto; }
+  table {
+     width:100%; border-collapse:collapse; background:#fff; border:2px solid var(--verde); border-radius:10px; overflow:hidden; box-shadow:0 6px 18px rgba(0,104,71,.12); }
+  th, td {
+     padding:10px 12px; text-align:center; white-space:nowrap; }
+  th {
+     background:var(--verde); color:#fff; font-size:.75rem; text-transform:uppercase; letter-spacing:.04em; }
+  td.equipo, th.equipo { 
+    text-align:left; }
+  tbody tr {
+     border-top:1px solid var(--borde); }
+  tbody tr:nth-child(even) { 
+    background:#f8faf8; }
+  tbody tr:hover {
+     background:#e9f3ee; }
+  .liguilla td:first-child {
+     border-left:4px solid var(--verde); }
+  .pts {
+     font-weight:700; color:var(--verde); }
+  .msg {
+     text-align:center; color:var(--suave); padding:30px 0; }
+  .nota { 
+    max-width:900px; margin:-24px auto 40px; padding:0 16px; color:var(--suave); font-size:.8rem; }

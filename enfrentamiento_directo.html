@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enfrentamiento directo - Liga MX</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Public+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/enfrentamiento.css">
+</head>
+<body>
+    <header class="barra">
+        <a class="volver" href="index.html">&#8249; Volver al inicio</a>
+        <h1>Enfrentamiento directo</h1>
+    </header>
+
+    <main class="tablero">
+        <section class="lista" aria-labelledby="t-lista">
+            <h2 id="t-lista">Equipos</h2>
+            <p class="ayuda" id="ayuda" aria-live="polite"></p>
+            <ul id="lista-equipos"></ul>
+        </section>
+
+        <section class="duelo" aria-labelledby="t-duelo">
+            <h2 id="t-duelo" class="oculto">Duelo</h2>
+            <div class="ranuras">
+                <button type="button" class="ranura r1" id="ranura1"></button>
+                <span class="vs">vs</span>
+                <button type="button" class="ranura r2" id="ranura2"></button>
+            </div>
+            <div id="resultado" aria-live="polite"></div>
+        </section>
+    </main>
+
+    <script src="js/enfrentamiento.js"></script>
+</body>
+</html>

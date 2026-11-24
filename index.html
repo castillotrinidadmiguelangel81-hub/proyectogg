@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CPW - Liga MX Layout</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/campeones.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;1,600&family=Oswald:wght@600;700&display=swap"
+        rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,600&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="logo-container">
+            <img src="img/ligamx.png" alt="Logo Liga MX" class="logo-img">
+            <h1 class="site-title">Liga MX</h1>
+        </div>
+    </header>
+
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="radar.html">Radar de jugadores</a></li>
+            <li class="dropdown">
+                <a href="#">Simulador ▾</a>
+                <ul class="dropdown-content">
+                    <li><a href="simulador_libre.html">Simulador libre</a></li>
+                    <li><a href="simulador_oficial.html">Quiniela fase final</a></li>
+                </ul>
+            </li>
+            <li><a href="ejercicios/quinela.html">Quiniela</a></li>
+            <li class="dropdown">
+                <a href="#">Internacional ▾</a>
+                <ul class="dropdown-content">
+                    <li><a href="sudamericana.html">Sudamericana</a></li>
+                    <li><a href="libertadores.html">Libertadores</a></li>
+                    <li><a href="concachampions.html">Concachampions</a></li>
+                </ul>
+            </li>
+            <li><a href="liga-mx/liga-mx/index2.html">Posiciones</a></li>
+            <li><a href="ficha_de_contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <main class="layout-principal">
+
+        <aside class="sidebar">
+            <h4 class="sabias-que-titulo">Derrota mexicana</h4>
+            <iframe width="100%" height="200" src="https://www.youtube.com/embed/aOepWJeb7bQ?si=OVk76hJeAkgl5S08"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+            <ul>
+                <li>FMF</li>
+                <li>Concacaf</li>
+            </ul>
+
+            <div class="info-box box-curiosidades">
+                <span class="globe-icon">🧠</span>
+                <p>¿Conoces la historia de la liga?</p>
+                <button id="btn-dato-aleatorio" class="btn-curiosidad" onclick="mostrarDatoAleatorio()">Dato
+                    Aleatorio</button>
+            </div>
+
+            <div class="info-box">
+                <span class="globe-icon">🦅</span>
+                <p>Odiame más</p>
+                <img src="img/toros.png" alt="Toros" class="main-image">
+            </div>
+
+                <div class="info-box" style="border: 2px solid #eb211a; background-color: #fff5f5;">
+                    <span class="globe-icon">📉💸</span>
+                    <h4 style="color: #eb211a; margin: 5px 0;">Zona de Descenso y Multas</h4>
+                    <p style="font-size: 0.9rem;">Calcula el cociente de los últimos 6 torneos y descubre qué equipo de
+                        Expansión subiría.</p>
+
+
+                    <a href="tabla_cocientes.html" title="Ir a la Tabla Porcentual">
+                        <img src="img/descenso_banner.jpg" alt="Simulador de Descenso Liga MX" class="main-image"
+                            style="cursor: pointer; border-radius: 6px; margin: 8px 0;"
+                            onerror="this.src='img/toros.png'">
+                    </a>
+
+                    <a href="tabla_cocientes.html" class="btn-curiosidad"
+                        style="display: inline-block; text-decoration: none; background-color: #eb211a;">
+                        Simular Cociente ⚽
+                    </a>
+                </div>
+                <img src="img/tecos.png" alt="Tecos" class="main-image">
+                <div class="sabias-que-box">
+                    <div class="sabias-que-header">
+                        <span class="sabias-que-icono">💡</span>
+                        <h4 class="sabias-que-titulo">¿Sabías que...?</h4>
+                    </div>
+                    <p class="sabias-que-texto">
+                        El <span class="sabias-que-destaque">Estadio Azteca</span> es el único recinto en el mundo que
+                        ha sido sede de dos finales de Copa del Mundo (1970 y 1986) y es el primero en albergar tres
+                        inauguraciones mundialistas.
+                    </p>
+                </div>
+                <img src="img/logomermeladeros.jpg" alt="Tecos" class="main-image">
+                <p class="sabias-que-texto2">Mermeladeros de Tultepec fc es un club que juega en la primera division del oriente en Tultepec, Edomex y es el equipo oficial de la pagina.</p>
+                <div class="sabias-que-box">
+                    <div class="sabias-que-header">
+                        <span class="sabias-que-icono">💡</span>
+                        <h4 class="sabias-que-titulo">¿Sabías que...?</h4>
+                    </div>
+                    <p class="sabias-que-texto">
+                        El unico club que jamas ha perdido una final de liga mx es mermeladeros de Tultepec 
+                        esto debido a que jamas a llegado a una.
+                    </p>
+                </div>
+                <img src="img/veracruz.jpg" alt="Tecos" class="main-image">
+                 <div class="sabias-que-box">
+                    <div class="sabias-que-header">
+                        <span class="sabias-que-icono">💡</span>
+                        <h4 class="sabias-que-titulo">¿Sabías que...?</h4>
+                    </div>
+                    <p class="sabias-que-texto">
+                        Pumas no es equipo grande.
+                    </p>
+                </div>
+                <img src="img/goleadoresmermeladeros.jpg" alt="Tecos" class="main-image">
+                 <p class="sabias-que-texto2">Mermeladeros tiene los mismos goles que el Real Madrid en la liga MX de no creerse!!!!!! </p>
+                  <div class="sabias-que-box">
+                    <div class="sabias-que-header">
+                        <span class="sabias-que-icono">💡</span>
+                        <h4 class="sabias-que-titulo">¿Sabías que...?</h4>
+                    </div>
+                    <p class="sabias-que-texto">
+                        El america no tuvo infancia porque ya nacio grande.
+                    </p>
+                </div>
+                <div class="info-box">
+    <span class="globe-icon">🏆</span>
+    <h4 class="sabias-que-titulo">Arma tu XI Histórico</h4>
+    <p>Elige a las máximas leyendas de la Liga MX y calcula la media de tu equipo.</p>
+    <a href="xi_historico.html" class="btn-curiosidad" style="display: inline-block; text-decoration: none;">Crear Alineación ⚽</a>
+</div>
+<div class="info-box encuesta-widget" id="widget-encuesta">
+    <span class="globe-icon">📊</span>
+    <h4 class="sabias-que-titulo">Encuesta de la Semana</h4>
+    <p class="encuesta-pregunta" id="encuesta-pregunta"></p>
+
+    <form id="form-encuesta">
+        <div id="encuesta-opciones" class="encuesta-opciones"></div>
+        <button type="submit" class="btn-curiosidad" style="width: 100%; margin-top: 10px;">Votar 🗳️</button>
+    </form>
+
+    <div id="encuesta-resultados" class="encuesta-resultados" style="display: none;"></div>
+</div>
+<div class="sabias-que-box">
+                    <div class="sabias-que-header">
+                        <span class="sabias-que-icono">💡</span>
+                        <h4 class="sabias-que-titulo">¿Sabías que...?</h4>
+                    </div>
+                    <p class="sabias-que-texto">
+                       Yo no me burlo de los que creen en los extraterrestres porque yo crei que veracruz no seria desafiliado.
+                    </p>
+                </div>
+            </div>
+        </aside>
+
+        <div class="contenido-derecha">
+            <section class="seccion-principal">
+                <h4 class="sabias-que-titulo">Bienvenido</h4>
+                <p>Este es un sitio web dedicado a la gloriosa liga BBVA bancomer.</p>
+                <p>El proyecto sera un repositorio sobre la liga mx incluyendo datos historicos, tablas generales, tabla
+                    historica, datos curiosos, historial de juegos, titulos, finales, logros en torneos internacionales.
+                </p>
+                <div class="media-container">
+                    <img src="img/principal.jpg" alt="Imagen principal" class="main-image">
+                </div>
+                <p>Realiza tus quinielas para jugar con amigos, mantente al tanto de la tabla de posiciones y descubre
+                    un poco mas de la primera division de la liga profesional de futbol mexicano.</p>
+                <a href="conocenos.html" target="_blank" class="btn-enlace">Conoce a nuestro equipo</a>
+                <a href="ejercicio2.php" target="_blank" class="btn-enlace">Soporte interno</a>
+                <a href="https://www.ameshop.com.mx/" target="_blank" class="btn-enlace">Productos chingones del
+                    America</a>
+            </section>
+
+            <article class="articulo-contenido">
+                <h4 class="sabias-que-titulo">¿Qué es la Liga MX?</h4>
+                <p>La Primera División de México también conocida simplemente como Liga MX o por motivos de patrocinio
+                    Liga BBVA MX es la máxima categoría masculina del sistema de ligas de México y la principal
+                    competición de clubes del país. Desde el año 2012 cuenta con una organización autónoma respecto a la
+                    Federación Mexicana de Fútbol. Se juegan dos torneos cortos por ciclo anual futbolístico (cada uno
+                    con su campeón) denominados Apertura y Clausura (en ese orden), antes llamados Invierno y Verano
+                    respectivamente. El campeonato se define por medio de una fase final posterior a cada fase regular,
+                    conocida como liguilla.</p>
+            </article>
+            <section class="campeones" id="campeones" aria-labelledby="camp-titulo">
+                <h2 id="camp-titulo">🏆 Campeones de la Liga MX</h2>
+                <p class="camp-sub">Elige torneo de clausura o apertura y recorre cada campeon con las flechas.</p>
+
+                <div class="camp-tabs" role="tablist" aria-label="Tipo de torneo">
+                    <button class="camp-tab activa" role="tab" aria-selected="true" data-tipo="apertura">Campeones de
+                        Apertura <span class="camp-cuenta"></span></button>
+                    <button class="camp-tab" role="tab" aria-selected="false" data-tipo="clausura">Campeones de Clausura
+                        <span class="camp-cuenta"></span></button>
+                </div>
+
+                <div class="camp-escenario">
+                    <button class="camp-flecha" id="camp-prev" aria-label="Campeones anteriores">&#8249;</button>
+                    <div class="camp-ventana">
+                        <div class="camp-pista" id="camp-pista" aria-live="polite"></div>
+                    </div>
+                    <button class="camp-flecha" id="camp-next" aria-label="Campeones siguientes">&#8250;</button>
+                </div>
+
+                <div class="camp-pie">
+                    <span id="camp-rango"></span>
+                    <div class="camp-barra"><span id="camp-progreso"></span></div>
+                </div>
+            </section>
+            <section class="mrm-contenedor" id="historia-mermeladeros">
+                <div class="mrm-header-banner">
+                    <span class="mrm-badge-especial">Club Destacado del Portal</span>
+                    <h2 class="mrm-titulo-principal">🍓 Crónicas de Mermeladeros FC</h2>
+                    <p class="mrm-subtitulo">Explora la identidad, plantilla, partidos épicos y goleadores del equipo
+                        sensación.</p>
+                </div>
+
+                <div class="mrm-tabs-nav" role="tablist">
+                    <button class="mrm-tab-btn mrm-activa" data-tab="identidad">🛡️ El Escudo</button>
+                    <button class="mrm-tab-btn" data-tab="convocados">📋 Convocados</button>
+                    <button class="mrm-tab-btn" data-tab="debut">🏟️ El Debut</button>
+                    <button class="mrm-tab-btn" data-tab="partidos">⚽ Partidos (3-1, 4-3, 3-4)</button>
+                    <button class="mrm-tab-btn" data-tab="fichajes-goleo">🔥 Fichajes y Goleo</button>
+                </div>
+
+                <div class="mrm-panel-dinamico" id="mrm-panel-contenido"></div>
+            </section>
+             <article class="articulo-contenido">
+                <h4 class="sabias-que-titulo">¿Que torneos necesitaria ganar Mermeladeros para llegar a primera Division?</h4>
+                <p>Se necesitaria inscribir a la liga TDP donde participan 246 equipos en 18 grupos de los cuales se necesita ser de los primeros 2 para entrar a la liguilla de 64 equipos, como somos un equipo nuevo ascenderiamos a premier b donde enfrentariamos a otros 9 oponentes del que califican los mejores 4 y ganando una liguilla despues de eso ascenderiamos a premier A, en este punto es lo mismo que en premier B con un grupo de 10 pero ahora en una liguilla de 8, con el dinero puedes acreditarte para ser un club de primera premier osea un club profesional en la 3ra division mexicana como el bueno de cuervo que parla de ello todo el tiempo en un grupo de 9 donde clasifican los 4 mejores a una liguilla que si ganas te ascienden a la liga de expansion donde existen 16 equipos donde ganar ya sera opcional ya que lo importante aqui es tener contactos que decidan que mermeladeros debe estar en primera y asi compre una plaza en primera division y rente o construya un estadio para albergar a los fans de mermeladeros en primera, pero como mermeladeros es humilde se conforma con ser campeon de la liga del deportivo oriente antes de irnos nos patrocina verduleria quetzalli donde todo ya valio verdura.</p>
+            <div class="info-ayuda-contenedor">
+    <button type="button" class="btn-interrogacion" onclick="abrirModalInfo()" title="Acerca de esta página">?</button>
+</div>
+            </article>
+<section class="seccion-principal">
+    <h2>Historial de enfrentamientos</h2>
+    <iframe src="enfrentamiento_directo.html" width="100%" height="780" style="border: none; border-radius: 10px;" title="Historial de enfrentamientos"></iframe>
+</section>
+<article class="nota-periodistica">
+    <header class="nota-encabezado">
+        <span class="nota-cintillo">CRÓNICA DE LA LIGA MX</span>
+        <h2 class="nota-titular">Los niños creceran con un america que es el mas grande de la liga.</h2>
+        <p class="nota-sumario">Crees que tu equipo es grande? que pensarias si te digo que los niños ya no discuten por quien es el mas grande sino por quien es el 2do, 3ro, 4to grande. </p>
+        
+        <div class="nota-meta">
+            <span class="nota-autor">Por <strong>Redacción Portal Liga MX</strong> • ATZ</span>
+            <time datetime="2026-11-22" class="nota-fecha">22 de noviembre de 2026 | Ciudad de México</time>
+        </div>
+    </header>
+
+    <figure class="nota-figura">
+        <img src="img/americacampeon.jpg" alt="Festejo en el estadio tras el gol decisivo" class="nota-imagen">
+        <figcaption class="nota-pie-foto">El america viene ganando en varias decadas sin depender de logros del pasado. (Foto: Archivo Liga MX)</figcaption>
+    </figure>
+
+    <div class="nota-cuerpo">
+        <p>El America ultimamente se ha distanciado bastante de sus perseguidores en titulos, muchos señores o incluso adultos de mediana edad  crecieron con un america que no tenia tanta diferencia de titulos, si bien si era un equipo grande todavia existia ese debate de quien es el mas grande de México.</p>
+        
+        <p>Los niños nacieron en una epoca donde el America ya ni siquiera compite por ganarle en titulos a otro equipo, compite por distanciarse, aunado a ello es el maximo ganador de concachampions.</p>
+
+        <blockquote class="nota-cita">
+            “Si todos compiten por ser segundos, en realidad existe una competencia?”
+        </blockquote>
+
+        <p>Ya nadie discute si el america es el mas grande el odio general puede hacer pensar a algunos que su equipo tal vez es mas grande pero el paraje desolador de ver a jovenes apoyar a sus equipos sin ponerse a pensar en ello incluso pensando en quien no es grande como el caso Pumas.</p>
+
+        <p>La grandeza del America es bastante buena para la liga ya que se posiciona como el enemigo a vencer y genera un vilano comun entre los equipos de la liga, pero sigue siendo peligroso que el america se distancie de sus perseguidores mas cercanos.</p>
+    </div>
+</article>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 Liga BBVA. Todos los derechos reservados.</p>
+    </footer>
+
+    <div id="overlay-drawer" class="overlay-drawer" onclick="cerrarDrawer()"></div>
+    <div id="drawer-izquierdo" class="drawer-izquierdo">
+        <div class="drawer-header">
+            <h3 id="drawer-titulo">Dato Curioso</h3>
+            <button class="cerrar-drawer" onclick="cerrarDrawer()">&times;</button>
+        </div>
+        <div class="drawer-body">
+            <img id="drawer-img" src="" alt="Imagen del dato curioso" class="img-curiosidad">
+            <p id="drawer-texto" class="texto-curiosidad"></p>
+        </div>
+        <div class="drawer-footer">
+            <button class="btn-curiosidad" onclick="mostrarDatoAleatorio()">Otro Dato 🎲</button>
+        </div>
+    </div>
+    <div id="modal-info-pagina" class="modal-info-overlay" onclick="cerrarModalInfo(event)">
+    <div class="modal-info-caja">
+        <button type="button" class="modal-info-cerrar" onclick="cerrarModalInfo()">&times;</button>
+        <img src="img/ligamx.png" alt="Logo Liga MX" class="logo-img">
+        <h3>Acerca del Portal Liga MX</h3>
+        <p>La seccion de posiciones de la pagina llevo todo el desarrollo de la misma sin un boton de regresar gracias a uno de nuestros desarrolladores que todo el tiempo obvio el hacer ese trabajo.</p>
+    </div>
+</div>
+
+    <script src="js/curiosidades.js"></script>
+    <script src="js/campeones.js"></script>
+    <script src="js/mermeladeros.js"></script>
+    <script src="js/encuesta.js"></script>
+    <script>
+        function abrirModalInfo() {
+    document.getElementById('modal-info-pagina').style.display = 'flex';
+}
+
+function cerrarModalInfo(event) {
+    // Cierra si se da clic en la 'X' o en el fondo oscuro fuera de la caja
+    if (!event || event.target.id === 'modal-info-pagina') {
+        document.getElementById('modal-info-pagina').style.display = 'none';
+    }
+}
+    let ultimoScroll = 0;
+    const navbar = document.querySelector('.navbar');
+
+    window.addEventListener('scroll', () => {
+        if (window.innerWidth <= 900) {
+            const scrollActual = window.pageYOffset || document.documentElement.scrollTop;
+            
+            if (scrollActual > ultimoScroll && scrollActual > 120) {
+                navbar.classList.add('navbar-oculta');
+            } else {
+                navbar.classList.remove('navbar-oculta');
+            }
+            ultimoScroll = scrollActual <= 0 ? 0 : scrollActual;
+        } else {
+            navbar.classList.remove('navbar-oculta');
+        }
+    });
+</script>
+</body>
+
+</html>

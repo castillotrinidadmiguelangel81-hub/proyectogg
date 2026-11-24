@@ -1,0 +1,141 @@
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+body { background-color: #f4f7f6; color: #333; }
+
+.header-oficial {
+    background-color: #006B47;
+    color: white;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 4px solid #CE1126;
+}
+
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-img {
+    height: 60px;       /* Ajusta la altura según qué tan grande lo quieras */
+    width: auto;        /* Mantiene la proporción original del PNG */
+    object-fit: contain;
+    border-radius: 0;   /* Evita que herede bordes redondeados si tienes reglas generales para img */
+}
+.site-title { margin: 0; font-size: 1.8rem; }
+
+.btn-regresar {
+    background-color: #fff;
+    color: #006B47;
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+.btn-regresar:hover { background-color: #e0e0e0; }
+
+.bracket-container {
+    max-width: 1200px;
+    margin: 30px auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.instrucciones { text-align: center; margin-bottom: 30px; }
+.instrucciones h2 { color: #006B47; margin-bottom: 10px; }
+.instrucciones p { color: #555; }
+
+.bracket {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.fase {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.fase h3 {
+    text-align: center;
+    color: #0d233a;
+    margin-bottom: 20px;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.llave {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    background: #f8f9fa;
+    border: 1px solid #d5dbe3;
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.slot-equipo {
+    background: white;
+    border: 2px solid #0d233a;
+    color: #0d233a;
+    padding: 12px;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.2s;
+    min-height: 45px;
+    width: 100%;
+}
+
+.slot-equipo:hover:not(.vacio) { background: #e8eef5; }
+.slot-equipo.vacio { border: 2px dashed #8a95a5; color: transparent; cursor: default; background: #fafafa; }
+.slot-equipo.seleccionado { background: #006B47; color: white; border-color: #006B47; }
+
+.campeon-slot { 
+    border-color: #f2c200; 
+    background: #fffdf0; 
+    padding: 25px 15px; 
+    font-size: 18px; 
+    text-transform: uppercase;
+}
+.campeon-slot:not(.vacio) { background: #f2c200; color: #0d233a; border-style: solid; }
+
+.acciones { text-align: center; margin-top: 40px; }
+.btn-guardar {
+    background-color: #CE1126;
+    color: white;
+    padding: 15px 35px;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.btn-guardar:hover:not(:disabled) { background-color: #a30e1e; }
+.btn-guardar:disabled { background-color: #b8c0cc; cursor: not-allowed; }
+.btn-borrar {
+    background-color: #6c757d;
+    color: white;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 15px;
+    transition: background-color 0.3s;
+}
+.btn-borrar:hover {
+    background-color: #495057;
+}

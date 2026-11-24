@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Liga MX · Tablas de posiciones</title>
+<link rel="stylesheet" href="estilosposiciones.css">
+</head>
+<body>
+<header>
+  <h1>  Tablas de posiciones en cada torneo</h1>
+</header>
+<div class="encabezado"></div>
+<div class="filtros">
+  <div class="campo">
+    <label for="temporada">Temporada</label>
+    <select id="temporada"><option value="">Escoge una temporada</option></select>
+  </div>
+  <div class="campo">
+    <label for="torneo">Torneo</label>
+    <select id="torneo" disabled><option value="">Elige temporada primero</option></select>
+  </div>
+  <div class="campo">
+    <label for="equipo">Buscar equipo</label>
+    <input id="equipo" type="search" placeholder="Ej. América" disabled>
+  </div>
+</div>
+
+<div class="tabla-wrap" id="resultado"><p class="msg">Selecciona una temporada</p></div>
+<p class="nota">Las filas con borde verde son la zona de liguilla</p>
+
+<script src="posiciones.js"></script>
+</script>
+</body>
+</html>

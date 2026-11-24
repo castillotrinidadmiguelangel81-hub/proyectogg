@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabla Porcentual y Simulador de Multas - Liga MX</title>
+    <link rel="stylesheet" href="css/cocientes.css">
+</head>
+<body>
+
+    <header class="header-simulador">
+        <div class="logo-container">
+           <img src="img/ligamx.png" alt="Logo Liga MX" class="logo-img">
+            <h1>LIGA MX - Tabla de Cocientes</h1>
+        </div>
+        <a href="index.html" class="btn-regresar">❮ REGRESAR</a>
+    </header>
+
+    <main class="contenido-central">
+        <section class="panel-controles">
+            <div class="filtro-grupo">
+                <label for="select-temporada"><strong>Seleccionar Cierre Histórico:</strong></label>
+                <select id="select-temporada">
+                    <option value="Clausura 2023">Temporada 2022-23 (Cierre Clausura 2023)</option>
+                    <option value="Clausura 2022">Temporada 2021-22 (Cierre Clausura 2022)</option>
+                    <option value="Guardianes 2021">Temporada 2020-21 (Cierre Guardianes 2021)</option>
+                </select>
+            </div>
+
+            <div class="simulador-vivo">
+                <h3>Simulador Rápido de Jornada (6 Torneos)</h3>
+                <p>Modifica los puntos o partidos de cualquier club en la tabla para recalcular el cociente y ver quién pagaría multa o descendería.</p>
+                <button id="btn-reset-tabla" class="btn-secundario">Restaurar Datos Oficiales de BD</button>
+            </div>
+        </section>
+
+        <div class="tabla-responsive">
+            <table id="tabla-porcentual">
+                <thead>
+                    <tr>
+                        <th>Pos</th>
+                        <th>Club</th>
+                        <th>Pts (6 Torneos)</th>
+                        <th>PJ</th>
+                        <th>Cociente</th>
+                        <th>Estatus / Multa</th>
+                        <th>Historia Alternativa</th>
+                    </tr>
+                </thead>
+                <tbody id="cuerpo-tabla-cocientes">
+                    <!-- Se llena dinámicamente desde MySQL vía JS -->
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <!-- Ventana Modal (Pop-up de Consecuencias e Historia) -->
+    <div id="modal-cociente" class="modal-overlay">
+        <div class="modal-caja">
+            <span class="cerrar-modal" onclick="cerrarModalCociente()">&times;</span>
+            <div class="modal-header-equipo">
+                <img id="modal-escudo" src="" alt="Escudo" onerror="this.src='https://via.placeholder.com/70/0c6e32/FFFFFF?text=MX'">
+                <div>
+                    <h2 id="modal-nombre-equipo">Nombre del Equipo</h2>
+                    <span id="modal-badge-multa" class="badge-multa">Multa: $0</span>
+                </div>
+            </div>
+            
+            <div class="modal-cuerpo">
+                <div class="bloque-info">
+                    <h4>🔼 Equipo de Expansión que hubiera ascendido en su lugar:</h4>
+                    <p id="modal-ascenso"></p>
+                </div>
+                <div class="bloque-info">
+                    <h4>📰 Suceso Histórico y Consecuencias Directas:</h4>
+                    <p id="modal-consecuencias"></p>
+                </div>
+                <div class="bloque-info alerta-futuro">
+                    <h4>🏆 ¿Qué torneos o logros futuros se hubiera perdido?</h4>
+                    <p id="modal-perdidas"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <p>© 2026 Liga BBVA. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="js/cocientes.js"></script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+body { background-color: #f4f7f6; color: #333; padding: 20px; display: flex; justify-content: center; }
+
+.browser-frame { max-width: 960px; width: 100%; background: #fff; border-radius: 10px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); }
+.site-header { background-color: #006B47; color: white; padding: 15px 20px; display: flex; justify-content: space-between; align-items: center; border-radius: 10px 10px 0 0; border-bottom: 4px solid #CE1126; }
+.logo-container { display: flex; align-items: center; gap: 10px; }
+.main-nav ul { display: flex; list-style: none; gap: 15px; }
+.main-nav a { color: white; text-decoration: none; font-weight: bold; }
+
+.sesion-container { padding: 60px 20px; display: flex; justify-content: center; }
+.sesion-box { background: #ffffff; border: 2px solid #e0e0e0; border-radius: 8px; padding: 40px; width: 100%; max-width: 400px; text-align: center; box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.05); }
+.sesion-box h2 { color: #006B47; margin-bottom: 25px; font-size: 1.8rem; }
+
+.input-group { text-align: left; margin-bottom: 20px; }
+.input-group label { display: block; font-weight: bold; margin-bottom: 8px; color: #555555; }
+.input-group input { width: 100%; padding: 12px; border: 1px solid #cccccc; border-radius: 5px; font-size: 1rem; transition: border-color 0.3s ease; }
+.input-group input:focus { border-color: #006B47; outline: none; }
+
+.btn-primario { background-color: #006B47; color: white; border: none; padding: 14px; width: 100%; border-radius: 5px; font-size: 1rem; font-weight: bold; cursor: pointer; margin-top: 10px; transition: background-color 0.3s ease; }
+.btn-primario:hover { background-color: #004d33; }
+
+.toggle-accion { margin-top: 25px; font-size: 0.95rem; }
+#link-toggle { color: #CE1126; font-weight: bold; cursor: pointer; text-decoration: underline; }
+
+.mensaje-error { color: #CE1126; font-size: 0.9rem; margin-bottom: 15px; min-height: 15px; font-weight: bold; }

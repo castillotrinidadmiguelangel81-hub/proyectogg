@@ -1,0 +1,73 @@
+:root{--tiza:#F2F4EF;--tinta:#16241C;--cancha:#1D5E3A;--rojo:#B3283A;--linea:#D3DBD0;--gris:#6E7B72;--blanco:#fff}
+*{box-sizing:border-box}
+body{margin:0;background:var(--tiza);color:var(--tinta);font:400 1rem/1.5 "Public Sans",Arial,sans-serif}
+h1,h2,.vs,.marcador,.ranura .nombre{font-family:"Barlow Condensed","Arial Narrow",Arial,sans-serif;font-weight:700}
+.oculto{position:absolute;left:-9999px}
+.barra{background:var(--cancha);color:var(--blanco);padding:14px 24px;display:flex;align-items:center;gap:24px;flex-wrap:wrap}
+.barra h1{margin:0;font-size:2rem;letter-spacing:.01em}
+.volver{color:var(--blanco);text-decoration:none;font-weight:600;border:1px solid rgba(255,255,255,.55);padding:6px 14px;border-radius:4px}
+.volver:hover{background:rgba(255,255,255,.15)}
+a:focus-visible,button:focus-visible{outline:3px solid #F2B705;outline-offset:2px}
+.tablero{display:grid;grid-template-columns:minmax(260px,340px) 1fr;gap:24px;max-width:1200px;margin:24px auto;padding:0 16px}
+.lista,.duelo{min-width:0}
+.lista h2{margin:0;font-size:1.5rem}
+.ayuda{margin:4px 0 12px;color:var(--gris);font-size:.95rem;min-height:1.4em}
+.ayuda.aviso{color:var(--rojo);font-weight:600}
+#lista-equipos{list-style:none;margin:0;padding:0;border:1px solid var(--linea);background:var(--blanco);max-height:72vh;overflow-y:auto}
+#lista-equipos li+li{border-top:1px solid var(--linea)}
+.equipo{display:flex;align-items:center;gap:12px;width:100%;padding:8px 12px;background:none;border:0;border-left:5px solid transparent;font:inherit;color:inherit;text-align:left;cursor:pointer}
+.equipo:hover{background:var(--tiza)}
+.equipo .nombre{flex:1;font-weight:600}
+.equipo .tag{font-size:.8rem;color:var(--gris)}
+.equipo.e1{border-left-color:var(--cancha);background:#E3EFE7}
+.equipo.e2{border-left-color:var(--rojo);background:#F6E4E7}
+.escudo{width:36px;height:36px;flex:none;display:grid;place-items:center;overflow:hidden}
+.escudo img{width:100%;height:100%;object-fit:contain}
+.escudo.sin-logo{border-radius:50%;background:var(--linea);color:var(--tinta);font:700 .8rem/1 "Barlow Condensed",Arial,sans-serif}
+.ranuras{display:grid;grid-template-columns:1fr auto 1fr;gap:12px;align-items:stretch}
+.ranura{display:flex;align-items:center;gap:14px;padding:16px;background:var(--blanco);border:1px solid var(--linea);border-top-width:6px;font:inherit;color:inherit;text-align:left;cursor:pointer;min-height:96px}
+.ranura.r1{border-top-color:var(--cancha)}
+.ranura.r2{border-top-color:var(--rojo)}
+.ranura .escudo{width:56px;height:56px}
+.ranura .rol{display:block;font-size:.85rem;color:var(--gris)}
+.ranura .nombre{display:block;font-size:1.7rem;line-height:1.1}
+.ranura.vacia .nombre{color:var(--gris);font-weight:600}
+.vs{align-self:center;font-size:1.5rem;color:var(--gris)}
+#resultado{margin-top:20px}
+.vacio{padding:24px;border:1px dashed var(--linea);color:var(--gris);background:var(--blanco)}
+.resumen{background:var(--blanco);border:1px solid var(--linea);padding:16px}
+.resumen h2{margin:0 0 4px;font-size:1.5rem}
+.resumen .nota{margin:0 0 12px;color:var(--gris);font-size:.9rem}
+.cifras{display:grid;grid-template-columns:1fr 1fr 1fr;text-align:center;gap:8px}
+.cifras b{display:block;font:700 2.6rem/1 "Barlow Condensed",Arial,sans-serif}
+.cifras span{font-size:.9rem;color:var(--gris)}
+.cifras .c1 b{color:var(--cancha)}
+.cifras .c2 b{color:var(--rojo)}
+.barra-prop{display:flex;height:10px;margin:12px 0 8px;background:var(--linea)}
+.barra-prop i{display:block;height:100%}
+.barra-prop .b1{background:var(--cancha)}
+.barra-prop .b2{background:var(--rojo)}
+.barra-prop .bx{background:#A9B3AC}
+.goles{margin:0;text-align:center;font-size:.95rem}
+.tabla-cont{margin-top:16px;overflow-x:auto;border:1px solid var(--linea);background:var(--blanco)}
+table{width:100%;border-collapse:collapse;min-width:560px}
+th{text-align:left;font-weight:600;font-size:.9rem;color:var(--gris);padding:10px 12px;border-bottom:2px solid var(--tinta)}
+td{padding:8px 12px;border-bottom:1px solid var(--linea);vertical-align:middle}
+tr:last-child td{border-bottom:0}
+td.f{white-space:nowrap}
+td.t small{display:block;color:var(--gris)}
+td.loc{text-align:right}
+td.loc,td.vis{font-weight:400}
+.gana{font-weight:700}
+td.m{text-align:center;white-space:nowrap}
+.marcador{font-size:1.6rem;background:var(--tinta);color:var(--blanco);padding:0 10px;display:inline-block;letter-spacing:.04em}
+td.m small{display:block;color:var(--gris);font-size:.8rem}
+@media (max-width:860px){
+ .tablero{grid-template-columns:1fr}
+ .duelo{order:-1}
+ #lista-equipos{max-height:46vh}
+}
+@media (max-width:520px){
+ .ranuras{grid-template-columns:1fr}
+ .vs{justify-self:center}
+}

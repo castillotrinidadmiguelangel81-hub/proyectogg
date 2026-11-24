@@ -1,0 +1,291 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+    line-height: 1.6;
+}
+
+.header-simulador {
+    background-color: #0c6e32;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    border-bottom: 5px solid #eb211a;
+}
+
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-img {
+    height: 60px;       /* Ajusta la altura según qué tan grande lo quieras */
+    width: auto;        /* Mantiene la proporción original del PNG */
+    object-fit: contain;
+    border-radius: 0;   /* Evita que herede bordes redondeados si tienes reglas generales para img */
+}
+
+.btn-regresar {
+    background-color: #fff;
+    color: #0c6e32;
+    padding: 8px 18px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-regresar:hover {
+    background-color: #e2e8f0;
+}
+
+.contenido-central {
+    max-width: 1150px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.panel-controles {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 25px;
+    border-left: 5px solid #0284c7;
+}
+
+.filtro-grupo select {
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #cbd5e1;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.simulador-vivo {
+    max-width: 550px;
+}
+
+.simulador-vivo h3 {
+    color: #0c6e32;
+    font-size: 1.1rem;
+}
+
+.simulador-vivo p {
+    font-size: 0.9rem;
+    color: #64748b;
+    margin-bottom: 8px;
+}
+
+.btn-secundario {
+    background-color: #0284c7;
+    color: #fff;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.btn-secundario:hover {
+    background-color: #0369a1;
+}
+
+.tabla-responsive {
+    overflow-x: auto;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+thead {
+    background-color: #1e293b;
+    color: #fff;
+}
+
+th, td {
+    padding: 14px 12px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.celda-equipo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.celda-equipo img {
+    width: 35px;
+    height: 35px;
+    object-fit: contain;
+    border-radius: 50%;
+}
+
+/* Colores de Zona de Multa / Descenso */
+tr.zona-descenso {
+    background-color: #fee2e2;
+}
+
+tr.zona-multa-media {
+    background-color: #ffedd5;
+}
+
+tr.zona-multa-baja {
+    background-color: #fef9c3;
+}
+
+.input-sim {
+    width: 65px;
+    padding: 5px;
+    text-align: center;
+    border: 1px solid #94a3b8;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.cociente-valor {
+    font-weight: 800;
+    font-size: 1.05rem;
+    color: #0f172a;
+}
+
+.btn-ver-historia {
+    background-color: #eb211a;
+    color: #fff;
+    border: none;
+    padding: 7px 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 0.85rem;
+    transition: 0.2s;
+}
+
+.btn-ver-historia:hover {
+    background-color: #b91c1c;
+    transform: scale(1.03);
+}
+
+/* Estilos del Pop-up (Modal) */
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    padding: 20px;
+}
+
+.modal-caja {
+    background: #fff;
+    width: 100%;
+    max-width: 600px;
+    border-radius: 10px;
+    padding: 25px;
+    position: relative;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    animation: aparecer 0.25s ease-out;
+}
+
+@keyframes aparecer {
+    from { transform: translateY(-20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.cerrar-modal {
+    position: absolute;
+    top: 15px; right: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #64748b;
+    cursor: pointer;
+}
+
+.cerrar-modal:hover {
+    color: #eb211a;
+}
+
+.modal-header-equipo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+
+.modal-header-equipo img {
+    width: 65px;
+    height: 65px;
+    object-fit: contain;
+}
+
+.badge-multa {
+    display: inline-block;
+    background-color: #eb211a;
+    color: #fff;
+    padding: 4px 10px;
+    border-radius: 15px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.bloque-info {
+    background-color: #f8fafc;
+    padding: 12px 15px;
+    border-radius: 6px;
+    margin-bottom: 12px;
+    border-left: 4px solid #0284c7;
+}
+
+.bloque-info h4 {
+    color: #1e293b;
+    margin-bottom: 5px;
+    font-size: 0.95rem;
+}
+
+.bloque-info p {
+    font-size: 0.92rem;
+    color: #334155;
+}
+
+.alerta-futuro {
+    border-left-color: #0c6e32;
+    background-color: #f0fdf4;
+}
+
+.site-footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #1e293b;
+    color: #fff;
+    margin-top: 40px;
+}

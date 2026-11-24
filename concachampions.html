@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Concachampions - Liga MX</title>
+    <link rel="stylesheet" href="css/estiloslibertadores.css">
+</head>
+<body>
+    <header class="header-torneos">
+        <div class="logo-container">
+           <img src="img/ligamx.png" alt="Logo Liga MX" class="logo-img">
+            <h1 class="site-title">LIGA MX</h1>
+        </div>
+        <div class="header-links">
+            <a href="index.html" class="btn-regresar">❮ REGRESAR</a>
+        </div>
+    </header>
+
+    <nav class="sub-nav">
+        <ul>
+            <li><a href="libertadores.html" class="nav-link">Libertadores</a></li>
+            <li><a href="sudamericana.html" class="nav-link">Sudamericana</a></li>
+            <li><a href="concachampions.html" class="nav-link active">Concachampions</a></li>
+        </ul>
+    </nav>
+
+    <main class="main-content">
+        <section class="seccion-titulo">
+            <h2>Participantes de Concachampions (Era Moderna)</h2>
+        </section>
+        <section class="grid-participantes">
+            <div class="equipo-card" onclick="abrirModalEquipo('america_conca')">
+                <img src="img/america.jpg" alt="América" class="logo-equipo">
+                <p>América</p>
+            </div>
+            <div class="equipo-card" onclick="abrirModalEquipo('pachuca_conca')">
+                <img src="img/pachuca.jpg" alt="Pachuca" class="logo-equipo">
+                <p>Pachuca</p>
+            </div>
+            <div class="equipo-card" onclick="abrirModalEquipo('monterrey_conca')">
+                <img src="img/monterrey.jpg" alt="Monterrey" class="logo-equipo">
+                <p>Monterrey</p>
+            </div>
+            <div class="equipo-card" onclick="abrirModalEquipo('cruzazul_conca')">
+                <img src="img/cruzazul.jpg" alt="Cruz Azul" class="logo-equipo">
+                <p>Cruz Azul</p>
+            </div>
+            <div class="equipo-card" onclick="abrirModalEquipo('tigres_conca')">
+                <img src="img/tigres.jpg" alt="Tigres" class="logo-equipo">
+                <p>Tigres</p>
+            </div>
+            <div class="equipo-card" onclick="abrirModalEquipo('chivas_conca')">
+                <img src="img/chivas.jpg" alt="Chivas" class="logo-equipo">
+                <p>Chivas</p>
+            </div>
+            <div class="equipo-card" onclick="abrirModalEquipo('pumas_conca')">
+                <img src="img/pumas.jpg" alt="Pumas" class="logo-equipo">
+                <p>Pumas</p>
+            </div>
+            <div class="equipo-card" onclick="abrirModalEquipo('toluca_conca')">
+                <img src="img/toluca.jpg" alt="Toluca" class="logo-equipo">
+                <p>Toluca</p>
+            </div>
+            <div class="equipo-card" onclick="abrirModalEquipo('santos_conca')">
+                <img src="img/santos.jpg" alt="Santos" class="logo-equipo">
+                <p>Santos</p>
+            </div>
+            <div class="equipo-card" onclick="abrirModalEquipo('leon_conca')">
+                <img src="img/leon.jpg" alt="León" class="logo-equipo">
+                <p>León</p>
+            </div>
+            <div class="equipo-card" onclick="abrirModalEquipo('atlas_conca')">
+                <img src="img/atlas.jpg" alt="Atlas" class="logo-equipo">
+                <p>Atlas</p>
+            </div>
+            <div class="equipo-card" onclick="abrirModalEquipo('tijuana_conca')">
+                <img src="img/tijuana.jpg" alt="Tijuana" class="logo-equipo">
+                <p>Tijuana</p>
+            </div>
+            <div class="equipo-card" onclick="abrirModalEquipo('atlante_conca')">
+                <img src="img/atlante.jpg" alt="Atlante" class="logo-equipo">
+                <p>Atlante</p>
+            </div>
+            <div class="equipo-card" onclick="abrirModalEquipo('queretaro_conca')">
+                <img src="img/queretaro.jpg" alt="Querétaro" class="logo-equipo">
+                <p>Querétaro</p>
+            </div>
+            <div class="equipo-card" onclick="abrirModalEquipo('morelia_conca')">
+                <img src="img/morelia.jpg" alt="Morelia" class="logo-equipo">
+                <p>Morelia</p>
+            </div>
+        </section>
+
+        <section class="seccion-titulo">
+            <h2>Partidos Históricos</h2>
+        </section>
+        <section class="grid-historicos">
+            <div class="partido-card" onclick="abrirModalPartido('tigres_lafc')">
+                <div class="logos-enfrentamiento">
+                    <img src="img/tigres.jpg" alt="Tigres" class="logo-equipo-peq">
+                    <span>vs</span>
+                    <img src="img/lafc.jpg" alt="LAFC" class="logo-equipo-peq">
+                </div>
+                <img src="img/tigrescampeon.webp" alt="Tigres vs LAFC" class="img-partido-historico">
+                <h3 class="titulo-partido">Tigres Campeón 2020</h3>
+            </div>
+            <div class="partido-card" onclick="abrirModalPartido('pumas_seattle')">
+                <div class="logos-enfrentamiento">
+                    <img src="img/pumas.jpg" alt="Pumas" class="logo-equipo-peq">
+                    <span>vs</span>
+                    <img src="img/sounders.jpg" alt="Seattle Sounders" class="logo-equipo-peq">
+                </div>
+                <img src="img/pendepumas.jpg" alt="Pumas vs Seattle" class="img-partido-historico">
+                <h3 class="titulo-partido">El fin de la hegemonía</h3>
+            </div>
+        </section>
+    </main>
+
+    <div id="ventana-modal" class="modal">
+        <div class="modal-contenido">
+            <span class="cerrar-modal" onclick="cerrarModal()">&times;</span>
+            <img id="modal-imagen" src="" alt="Imagen">
+            <h2 id="modal-titulo"></h2>
+            <div id="modal-info" class="modal-texto"></div>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 Liga BBVA. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="js/internacional.js"></script>
+</body>
+</html>x

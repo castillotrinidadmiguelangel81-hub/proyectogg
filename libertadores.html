@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Libertadores - Liga MX</title>
+    <link rel="stylesheet" href="css/estiloslibertadores.css">
+</head>
+<body>
+    <header class="header-torneos">
+        <div class="logo-container">
+          <img src="img/ligamx.png" alt="Logo Liga MX" class="logo-img">
+            <h1 class="site-title">LIGA MX</h1>
+        </div>
+        <div class="header-links">
+            <a href="index.html" class="btn-regresar">❮ REGRESAR</a>
+        </div>
+    </header>
+
+    <nav class="sub-nav">
+        <ul>
+            <li><a href="libertadores.html" class="nav-link active">Libertadores</a></li>
+            <li><a href="sudamericana.html" class="nav-link">Sudamericana</a></li>
+            <li><a href="concachampions.html" class="nav-link">Concachampions</a></li>
+        </ul>
+    </nav>
+
+    <main class="main-content">
+        <section class="seccion-titulo">
+            <h2>Participantes de la Copa Libertadores</h2>
+        </section>
+
+        <section class="grid-participantes">
+            <div class="equipo-card" onclick="abrirModalEquipo('america_lib')">
+                <img src="img/america.jpg" alt="América" class="logo-equipo">
+                <p>América</p>
+            </div>
+            <div class="equipo-card" onclick="abrirModalEquipo('chivas_lib')">
+                <img src="img/chivas.jpg" alt="Chivas" class="logo-equipo">
+                <p>Chivas</p>
+            </div>
+            <div class="equipo-card" onclick="abrirModalEquipo('cruzazul_lib')">
+                <img src="img/cruzazul.jpg" alt="Cruz Azul" class="logo-equipo">
+                <p>Cruz Azul</p>
+            </div>
+            <div class="equipo-card" onclick="abrirModalEquipo('tigres_lib')">
+                <img src="img/tigres.jpg" alt="Tigres" class="logo-equipo">
+                <p>Tigres</p>
+            </div>
+            <div class="equipo-card" onclick="abrirModalEquipo('pumas_lib')">
+                <img src="img/pumas.jpg" alt="Pumas" class="logo-equipo">
+                <p>Pumas</p>
+            </div>
+            <div class="equipo-card" onclick="abrirModalEquipo('toluca_lib')">
+                <img src="img/toluca.jpg" alt="Toluca" class="logo-equipo">
+                <p>Toluca</p>
+            </div>
+            <div class="equipo-card" onclick="abrirModalEquipo('monterrey_lib')">
+                <img src="img/monterrey.jpg" alt="Monterrey" class="logo-equipo">
+                <p>Monterrey</p>
+            </div>
+            <div class="equipo-card" onclick="abrirModalEquipo('atlas_lib')">
+                <img src="img/atlas.jpg" alt="Atlas" class="logo-equipo">
+                <p>Atlas</p>
+            </div>
+            <div class="equipo-card" onclick="abrirModalEquipo('morelia_lib')">
+                <img src="img/morelia.jpg" alt="Morelia" class="logo-equipo">
+                <p>Morelia</p>
+            </div>
+            <div class="equipo-card" onclick="abrirModalEquipo('necaxa_lib')">
+                <img src="img/necaxa.jpg" alt="Necaxa" class="logo-equipo">
+                <p>Necaxa</p>
+            </div>
+            <div class="equipo-card" onclick="abrirModalEquipo('pachuca_lib')">
+                <img src="img/pachuca.jpg" alt="Pachuca" class="logo-equipo">
+                <p>Pachuca</p>
+            </div>
+            <div class="equipo-card" onclick="abrirModalEquipo('sanluis_lib')">
+                <img src="img/sanluis.jpg" alt="San Luis" class="logo-equipo">
+                <p>San Luis</p>
+            </div>
+            <div class="equipo-card" onclick="abrirModalEquipo('santos_lib')">
+                <img src="img/santos.jpg" alt="Santos" class="logo-equipo">
+                <p>Santos</p>
+            </div>
+            <div class="equipo-card" onclick="abrirModalEquipo('tijuana_lib')">
+                <img src="img/tijuana.jpg" alt="Tijuana" class="logo-equipo">
+                <p>Tijuana</p>
+            </div>
+            <div class="equipo-card" onclick="abrirModalEquipo('leon_lib')">
+                <img src="img/leon.jpg" alt="León" class="logo-equipo">
+                <p>León</p>
+            </div>
+            <div class="equipo-card" onclick="abrirModalEquipo('jaguares_lib')">
+                <img src="img/jaguares.jpg" alt="Jaguares" class="logo-equipo">
+                <p>Jaguares</p>
+            </div>
+            <div class="equipo-card" onclick="abrirModalEquipo('puebla_lib')">
+                <img src="img/puebla.jpg" alt="Puebla" class="logo-equipo">
+                <p>Puebla</p>
+            </div>
+            <div class="equipo-card" onclick="abrirModalEquipo('tecos_lib')">
+                <img src="img/tecos.png" alt="Tecos" class="logo-equipo">
+                <p>Tecos</p>
+            </div>
+        </section>
+
+        <section class="seccion-titulo">
+            <h2>Partidos Históricos</h2>
+        </section>
+
+        <section class="grid-historicos">
+            <div class="partido-card" onclick="abrirModalPartido('chivas_boca')">
+                <div class="logos-enfrentamiento">
+                    <img src="img/chivas.jpg" alt="Chivas" class="logo-equipo-peq">
+                    <span>vs</span>
+                    <img src="img/boca.jpg" alt="Boca Jrs" class="logo-equipo-peq">
+                </div>
+                <img src="img/4a0chivasvsboca.jpg" alt="Chivas vs Boca Jrs" class="img-partido-historico">
+                <h3 class="titulo-partido">Chivas vs Boca Jrs 4-0</h3>
+            </div>
+            
+            <div class="partido-card" onclick="abrirModalPartido('cruzazul_rosario')">
+                <div class="logos-enfrentamiento">
+                    <img src="img/cruzazul.jpg" alt="Cruz Azul" class="logo-equipo-peq">
+                    <span>vs</span>
+                    <img src="img/rosariocentral.jpg" alt="Rosario Central" class="logo-equipo-peq">
+                </div>
+                <img src="img/rosariovscruzazul.jpg" alt="Cruz Azul vs Rosario Central" class="img-partido-historico">
+                <h3 class="titulo-partido">Cruz Azul vs R. Central 2-0</h3>
+            </div>
+        </section>
+    </main>
+
+    <div id="ventana-modal" class="modal">
+        <div class="modal-contenido">
+            <span class="cerrar-modal" onclick="cerrarModal()">&times;</span>
+            <img id="modal-imagen" src="" alt="Imagen" class="">
+            <h2 id="modal-titulo"></h2>
+            <div id="modal-info" class="modal-texto"></div>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 Liga BBVA. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="js/internacional.js"></script>
+</body>
+</html>

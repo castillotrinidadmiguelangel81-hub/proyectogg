@@ -1,0 +1,143 @@
+/* Restablecimiento general */
+* { 
+    box-sizing: border-box; 
+    margin: 0; 
+    padding: 0; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+}
+
+/* Fondo y centrado */
+body { 
+    background-color: #f4f4f4; 
+    color: #333; /* Texto principal oscuro para mejor lectura */
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center;
+    min-height: 100vh; 
+    padding: 20px;
+}
+
+/* Enlace de regresar (Inicia con Rojo Bandera) */
+.btn-enlace {
+    background-color: #CE1126; /* Rojo bandera */
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    transition: background-color 0.3s;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.btn-enlace:hover {
+    background-color: #006847; /* Verde bandera */
+}
+
+/* Contenedor del formulario temático (Bordes verde y rojo) */
+form { 
+    background: #fff; 
+    padding: 30px; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); 
+    width: 100%; 
+    max-width: 450px; 
+    border-top: 6px solid #006847; /* Verde bandera superior */
+    border-bottom: 6px solid #CE1126; /* Rojo bandera inferior */
+}
+
+/* Etiquetas en color Verde Bandera */
+label { 
+    display: block; 
+    margin-top: 15px; 
+    text-align: left; 
+    font-weight: bold; 
+    color: #006847; 
+}
+
+/* Estilización unificada para inputs, selects y textareas */
+input[type="text"], 
+input[type="email"], 
+select, 
+textarea { 
+    width: 100%; 
+    padding: 10px; 
+    margin-top: 5px; 
+    border: 2px solid #ddd; 
+    border-radius: 4px;
+    font-size: 15px;
+    transition: border-color 0.3s;
+    background-color: #fafafa;
+}
+
+/* No permitir redimensionar los textareas horizontalmente */
+textarea {
+    resize: vertical;
+}
+
+/* Resaltado verde al seleccionar los campos */
+input[type="text"]:focus, 
+input[type="email"]:focus, 
+select:focus, 
+textarea:focus { 
+    outline: none; 
+    border-color: #006847; 
+    background-color: #fff;
+}
+
+/* Botón de Enviar Ticket (Inicia con Verde Bandera) */
+input[type="submit"] { 
+    background-color: #006847; /* Verde bandera */
+    color: #fff; 
+    border: none; 
+    padding: 15px 20px; 
+    width: 100%; 
+    margin-top: 25px; 
+    border-radius: 4px; 
+    cursor: pointer; 
+    font-size: 16px; 
+    font-weight: bold; 
+    text-transform: uppercase;
+    transition: background-color 0.3s, transform 0.1s; 
+}
+
+/* Efecto hover al botón (Cambia a Rojo Bandera) */
+input[type="submit"]:hover { 
+    background-color: #CE1126; /* Rojo bandera */
+}
+
+/* Efecto al hacer clic */
+input[type="submit"]:active {
+    transform: scale(0.98);
+}
+
+
+
+
+/* Estilo de los enlaces convertidos en botones rojos */
+a {
+    display: inline-block;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #d32f2f; /* Rojo */
+    padding: 10px 18px;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 14px;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+/* Efecto al pasar el cursor sobre los botones */
+a:hover {
+    background-color: #b71c1c; /* Rojo más oscuro */
+    transform: translateY(-1px);
+}
+
+/* Estilos de margen para el contenido restante del cuerpo */
+h1, p {
+    margin: 20px 20px 10px 20px;
+}
+
+/* Margen adicional para el botón 'Registrarme' fuera de la barra */

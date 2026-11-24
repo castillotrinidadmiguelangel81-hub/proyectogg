@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador Libre - Liga MX</title>
+    <link rel="stylesheet" href="css/simulador.css">
+    <style>
+        .header-simulador {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+        }
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .logo-container span {
+            font-size: 2.5rem;
+        }
+        .logo-container h1 {
+            margin: 0;
+            font-size: 1.8rem;
+        }
+        .btn-regresar {
+            background-color: #fff;
+            color: #0c6e32;
+            padding: 10px 20px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        .btn-regresar:hover {
+            background-color: #e0e0e0;
+        }
+        .equipo-draggable.bloqueado {
+            opacity: 0.3;
+            cursor: not-allowed !important;
+            transform: none !important;
+        }
+        .btn-reiniciar {
+            background-color: #e63946;
+            color: #fff;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            margin-left: 15px;
+        }
+        .btn-reiniciar:hover {
+            background-color: #c1121f;
+        }
+    </style>
+</head>
+<body>
+    <header class="header-simulador">
+        <div class="logo-container">
+           <img src="img/ligamx.png" alt="Logo Liga MX" class="logo-img">
+            <h1 class="site-title">LIGA MX</h1>
+        </div>
+        <h2 style="margin: 0;">Simulador Libre Liguilla</h2>
+        <div class="header-links">
+            <a href="index.html" class="btn-regresar">❮ REGRESAR</a>
+        </div>
+    </header>
+
+    <div class="simulador-container">
+        <aside class="banco-equipos" id="banco-equipos">
+            <img src="img/america.jpg" class="equipo-draggable" draggable="true" id="eq-america" data-poder="85">
+            <img src="img/monterrey.jpg" class="equipo-draggable" draggable="true" id="eq-monterrey" data-poder="84">
+            <img src="img/tigres.jpg" class="equipo-draggable" draggable="true" id="eq-tigres" data-poder="83">
+            <img src="img/cruzazul.jpg" class="equipo-draggable" draggable="true" id="eq-cruzazul" data-poder="82">
+            <img src="img/toluca.jpg" class="equipo-draggable" draggable="true" id="eq-toluca" data-poder="80">
+            <img src="img/pumas.jpg" class="equipo-draggable" draggable="true" id="eq-pumas" data-poder="79">
+            <img src="img/chivas.jpg" class="equipo-draggable" draggable="true" id="eq-chivas" data-poder="78">
+            <img src="img/pachuca.jpg" class="equipo-draggable" draggable="true" id="eq-pachuca" data-poder="77">
+            <img src="img/leon.jpg" class="equipo-draggable" draggable="true" id="eq-leon" data-poder="76">
+            <img src="img/santos.jpg" class="equipo-draggable" draggable="true" id="eq-santos" data-poder="75">
+            <img src="img/atlas.jpg" class="equipo-draggable" draggable="true" id="eq-atlas" data-poder="74">
+            <img src="img/sanluis.jpg" class="equipo-draggable" draggable="true" id="eq-sanluis" data-poder="73">
+            <img src="img/tijuana.jpg" class="equipo-draggable" draggable="true" id="eq-tijuana" data-poder="72">
+            <img src="img/puebla.jpg" class="equipo-draggable" draggable="true" id="eq-puebla" data-poder="71">
+            <img src="img/necaxa.jpg" class="equipo-draggable" draggable="true" id="eq-necaxa" data-poder="70">
+            <img src="img/juarez.jpg" class="equipo-draggable" draggable="true" id="eq-juarez" data-poder="68">
+            <img src="img/queretaro.jpg" class="equipo-draggable" draggable="true" id="eq-queretaro" data-poder="67">
+            <img src="img/atlante.jpg" class="equipo-draggable" draggable="true" id="eq-atlante" data-poder="65">
+        </aside>
+
+        <main class="bracket">
+            <div class="ronda cuartos" id="cuartos">
+                <div class="partido" data-partido="cf1">
+                    <div class="slot-equipo dropzone"></div>
+                    <div class="slot-equipo dropzone"></div>
+                </div>
+                <div class="partido" data-partido="cf2">
+                    <div class="slot-equipo dropzone"></div>
+                    <div class="slot-equipo dropzone"></div>
+                </div>
+                <div class="partido" data-partido="cf3">
+                    <div class="slot-equipo dropzone"></div>
+                    <div class="slot-equipo dropzone"></div>
+                </div>
+                <div class="partido" data-partido="cf4">
+                    <div class="slot-equipo dropzone"></div>
+                    <div class="slot-equipo dropzone"></div>
+                </div>
+            </div>
+
+            <div class="ronda semis" id="semis">
+                <div class="partido" data-partido="sf1">
+                    <div class="slot-equipo destino-sf1-1"></div>
+                    <div class="slot-equipo destino-sf1-2"></div>
+                </div>
+                <div class="partido" data-partido="sf2">
+                    <div class="slot-equipo destino-sf2-1"></div>
+                    <div class="slot-equipo destino-sf2-2"></div>
+                </div>
+            </div>
+
+            <div class="ronda final" id="final">
+                <div class="partido" data-partido="final">
+                    <div class="slot-equipo destino-f-1"></div>
+                    <div class="slot-equipo destino-f-2"></div>
+                </div>
+            </div>
+
+            <div class="ronda campeon" id="campeon">
+                <div class="partido">
+                    <div class="slot-equipo destino-campeon"></div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <div class="controles">
+        <button class="btn-simular" id="btn-simular-libre">Simular Liguilla</button>
+        <button class="btn-reiniciar" id="btn-reiniciar-libre">Refrescar / Limpiar</button>
+    </div>
+
+    <script src="js/simulador_libre.js"></script>
+</body>
+</html>

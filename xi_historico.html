@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tu propio XI histórico - Liga MX</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/xi_historico.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="logo-container">
+             <img src="img/ligamx.png" alt="Logo Liga MX" class="logo-img">
+            <h1 class="site-title">Liga MX</h1>
+        </div>
+    </header>
+
+    <div class="xi-volver-barra">
+        <a href="index.html" class="xi-volver">← Volver al inicio</a>
+    </div>
+
+    <main class="xi-pagina">
+        <h2 class="xi-titulo">⚽ Tu propio XI histórico</h2>
+        <p class="xi-sub">Arrastra a cada jugador hasta su posicion en la cancha. Solo entra en la posicion que le corresponde.</p>
+
+        <div class="xi-layout">
+            <aside class="xi-panel" id="xi-lista-panel">
+                <div class="xi-filtros">
+                    <input type="search" id="xi-buscar" placeholder="Buscar jugador...">
+                    <select id="xi-linea" aria-label="Filtrar por línea">
+                        <option value="">Todos</option>
+                        <option value="Portero">Porteros</option>
+                        <option value="Defensa">Defensas</option>
+                        <option value="Mediocampista">Medios</option>
+                        <option value="Delantero">Delanteros</option>
+                    </select>
+                </div>
+                <ul id="xi-lista" class="xi-lista"></ul>
+            </aside>
+
+            <section class="xi-campo">
+                <div id="xi-aviso" class="xi-aviso" role="alert"></div>
+                <div id="xi-cancha" class="xi-cancha"></div>
+
+                <div id="xi-stats" class="xi-stats" hidden>
+                    <div class="xi-lineas">
+                        <div class="xi-stat"><span>Defensa</span><b id="m-def"></b></div>
+                        <div class="xi-stat"><span>Mediocampo</span><b id="m-med"></b></div>
+                        <div class="xi-stat"><span>Delantera</span><b id="m-del"></b></div>
+                    </div>
+                    <div class="xi-stat xi-global"><span>Media global</span><b id="m-glo"></b></div>
+                </div>
+
+                <button id="xi-reiniciar" class="xi-btn" type="button">Reiniciar XI</button>
+            </section>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 Liga BBVA. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="js/jugadores_xi.js"></script>
+    <script src="js/xi_historico.js"></script>
+</body>
+</html>
